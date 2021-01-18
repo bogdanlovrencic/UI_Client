@@ -6,11 +6,11 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class CommunicationService {
-  baseUrl = `${environment.apiUrl}`;
+  private baseUrl = `${environment.apiUrl}`;
 
   constructor(private http: HttpClient) {}
 
-  getData() {
-    return this.http.get(this.baseUrl);
+  getIdentifiedObjects() {
+    return this.http.get(this.baseUrl + "getDetails/getIdentifiedObjects");
   }
 }

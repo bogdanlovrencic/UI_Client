@@ -1,0 +1,9 @@
+<ng-container *ngIf="identifiedObjects">
+  <div *ngFor="let identifiedObject of identifiedObjects">
+    <div>{{identifiedObject}}</div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!identifiedObjects">
+  <p>Nema podataka u bazi</p>
+</ng-container>
